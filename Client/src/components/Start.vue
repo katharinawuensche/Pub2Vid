@@ -62,7 +62,7 @@
     </b-container>
 
     <b-navbar type="light" variant="light" fixed="bottom">
-      <!-- <b-navbar-brand href="https://univie.ac.at" target="_blank">
+      <b-navbar-brand href="https://univie.ac.at" target="_blank">
         <img
           src="https://communications.univie.ac.at/fileadmin/user_upload/d_oeffentlichkeitsarbeit/Logos/2016-02/Uni_Logo_2016.png"
           height="100"
@@ -70,7 +70,7 @@
       </b-navbar-brand>
       <b-navbar-brand href="https://osu.edu/" target="_blank">
         <img src="https://www.moldex3d.com/wp-content/uploads/2014/02/OSU_Horizontal-2nekv1k.png" height="100" />
-      </b-navbar-brand> -->
+      </b-navbar-brand>
       <b-navbar-nav class="ml-auto">
         <b-nav-item to="/about">About this project</b-nav-item>
       </b-navbar-nav>

@@ -28,11 +28,58 @@
             real video examples for different elements and sections which can be used as a reference or inspiration for
             the users' own videos.
           </p>
-          <!-- <p>
+          <p>
             This project is a collaboration of researchers at the University of Vienna and the Ohio State University. If
             you want to get in touch, feel free to contact us at
             <a href="mailto:katharina.wuensche@unvie.ac.at" class="mail">katharina.wuensche@univie.ac.at</a>.
-          </p> -->
+          </p>
+        </b-col>
+      </b-row>
+
+      <b-row class="mt-3">
+        <b-col>
+          <h2 class="mb-3 font-weight-light" style="color: #006c66;">
+            Project Team
+          </h2>
+          <div style="display: flex; flex-direction: row; gap: 4rem;">
+            <p style="text-align:left">
+              Katharina Wünsche<br />
+              <small>
+                Faculty of Computer Science,<br />
+                University of Vienna,<br />
+                and Austrian Academy of Sciences<br />
+                Vienna, Austria
+              </small>
+            </p>
+            <p style="text-align:left">
+              Laura Koesten<br />
+              <small>
+                Visualization and Data Analysis,<br />
+                Faculty of Computer Science,<br />
+                University of Vienna<br />
+                Vienna, Austria
+              </small>
+            </p>
+            <p style="text-align:left">
+              Jian Chen<br />
+              <small>
+                Computer Science and Engineering,<br />
+                and Translational Data Analytics Institute<br />
+                The Ohio State University<br />
+                Ohio, USA
+              </small>
+            </p>
+            <p style="text-align:left">
+              Torsten Möller<br />
+              <small>
+                Visualization and Data Analysis,<br />
+                Faculty of Computer Science,<br />
+                and Research Network Data Science<br />
+                University of Vienna<br />
+                Vienna, Austria
+              </small>
+            </p>
+          </div>
         </b-col>
       </b-row>
       <!--  <b-row>
@@ -45,7 +92,7 @@
     </b-container>
 
     <b-navbar type="light" variant="light" fixed="bottom">
-      <!-- <b-navbar-brand href="https://univie.ac.at" target="_blank">
+      <b-navbar-brand href="https://univie.ac.at" target="_blank">
         <img
           src="https://communications.univie.ac.at/fileadmin/user_upload/d_oeffentlichkeitsarbeit/Logos/2016-02/Uni_Logo_2016.png"
           height="100"
@@ -53,7 +100,7 @@
       </b-navbar-brand>
       <b-navbar-brand href="https://osu.edu/" target="_blank">
         <img src="https://www.moldex3d.com/wp-content/uploads/2014/02/OSU_Horizontal-2nekv1k.png" height="100" />
-      </b-navbar-brand> -->
+      </b-navbar-brand>
       <b-navbar-nav class="ml-auto">
         <b-nav-item to="#">About this project</b-nav-item>
       </b-navbar-nav>
