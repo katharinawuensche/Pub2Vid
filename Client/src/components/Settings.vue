@@ -31,14 +31,22 @@
         <b-col class="float-right ml-auto" md="6">
           <b-row
             ><b-col>
-              <b>Expected duration in minutes:</b>
+              <b>Expected duration in minutes: </b>
+                <div class="float-right"><span @click="showDurationSetting = !showDurationSetting" style="cursor: pointer">⚙️</span>
+                <label class="text-sm" style="font-size: small;" v-show="showDurationSetting">Override max. duration (in seconds): <input
+                  type="number"
+                  v-model="maxLength"
+                  class="form-control d-inline ml-2"
+                  step="10"
+                  style="width: 100px;font-size: small;"></label>
+              </div>
               <vue-slider
                 class="my-5"
                 v-model="duration"
                 :tooltip="'always'"
-                :marks="{ 60: '01:00', 420: '07:00' }"
+                :marks="timeRange"
                 :min="60"
-                :max="420"
+                :max="+maxLength"
                 :interval="10"
                 :tooltipFormatter="format"
               ></vue-slider></b-col
@@ -172,7 +180,10 @@ export default {
   data() {
     return {
       showInfo: true,
+      showDurationSetting: false,
       currentExample: 0,
+      maxLength: Math.max(600, this.$store.state.duration),
+      warningSeen: false,
     };
   },
   computed: {
@@ -181,6 +192,16 @@ export default {
         return this.$store.state.duration;
       },
       set: function(newVal) {
+        if (newVal > 600)
+          if (!this.warningSeen) {
+            this.warningSeen = true;
+            this.$bvToast.toast("Our recommendations are based on videos shorter than 10 minutes. A longer setting could lead to less meaningful recommendations.", {
+              title: "Warning",
+              variant: "warning",
+              solid: true,
+              autoHideDelay: 5000,
+            });
+          }
         this.$store.state.duration = newVal;
       },
     },
@@ -194,6 +215,11 @@ export default {
           };
         })
       );
+    },
+    timeRange() {
+      let range = { 60: '01:00' }
+      range[this.maxLength] = new Date(this.maxLength * 1000).toISOString().slice(14, 19)
+      return range;
     },
     recommendedOutline() {
       return this.$store.state.recommendedOutline.map((s) => {

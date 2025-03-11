@@ -28,7 +28,7 @@ export default {
         tasks: [],
         headers: [
           /* { unit: "day", format: "MMMM Do" }, */
-          { unit: "second", format: "mm:ss", sticky: false, offset: 10 },
+          { unit: "second", format: "mm:ss", sticky: false, offset: this.offset ?? (Math.ceil((this.$store.state.duration / 11) / 15 ) * 15) },
         ],
         fitWidth: true,
         minWidth: 100,
@@ -55,9 +55,15 @@ export default {
     /* this.gantt.$set({
       rows: [],
     }); */
-    console.log("unmount");
+    // console.log("unmount");
   },
   computed: {
+    duration(){
+      return this.$store.state.duration;
+    },
+    offset() {
+      return Math.ceil((this.duration / 11) / 15 ) * 15
+    },
     rows() {
       this.backdoor;
       return this.outlines
@@ -108,6 +114,11 @@ export default {
     },
   },
   watch: {
+    offset (){
+      this.gantt.$set({headers: [
+          { unit: "second", format: "mm:ss", sticky: false, offset: this.offset },
+        ],})
+    },
     rows() {
       this.gantt.$set({
         rows: this.rows,
@@ -237,7 +248,7 @@ export default {
         }, 500);
       }
     }
-    console.log(this.gantt);
+    // console.log(this.gantt);
     this.backdoor++;
     this.gantt.api.gantt.on.viewChanged();
   },

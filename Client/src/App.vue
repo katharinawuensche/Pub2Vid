@@ -73,7 +73,7 @@ import {
   faClosedCaptioning,
   faMusic,
   faStar,
-  faLightbulb,
+  faLightbulb
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 

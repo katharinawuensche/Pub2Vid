@@ -171,7 +171,7 @@ export default {
           this.bary_point[1] = p[1];
           let bary_coords = this.barycentric(this.tri, p);
           if (e.targetTouches && e.targetTouches.length > 0) {
-            console.log("touch");
+            // console.log("touch");
             this.$store.state.priorities = {
               creativity: bary_coords[1],
               enthusiasm: bary_coords[2],
@@ -186,7 +186,7 @@ export default {
       let p = [0, 0];
       if (e.targetTouches) {
         if (e.targetTouches.length > 0) {
-          console.log(e);
+          // console.log(e);
           let rect = e.target.getBoundingClientRect();
           let x = e.targetTouches[0].pageX - rect.left;
           let y = e.targetTouches[0].pageY - rect.top;

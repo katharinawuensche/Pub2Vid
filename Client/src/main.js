@@ -76,7 +76,7 @@ const store = new Vuex.Store({
           // 'Content-Type': 'application/x-www-form-urlencoded',
         },
         body: JSON.stringify({
-          duration: this.state.duration,
+          duration: Math.min(this.state.duration, 570),
           creativity: this.state.priorities.creativity,
           enthusiasm: this.state.priorities.enthusiasm,
           informativity: this.state.priorities.informativity,

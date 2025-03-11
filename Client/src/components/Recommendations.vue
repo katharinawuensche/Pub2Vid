@@ -218,7 +218,7 @@ export default {
           name: "Free Music Archive",
           description: "Creative Commons music",
           url: "https://freemusicarchive.org/",
-          imgUrl: "https://freemusicarchive.org/assets/images/fma-logo-orange-250x129.png",
+          imgUrl: "https://upload.wikimedia.org/wikipedia/commons/9/98/Free-music-archive.jpg",
         },
         {
           name: "Freesound",
@@ -233,7 +233,7 @@ export default {
           description: "Creative Commons images",
           url: "https://search.creativecommons.org/",
           imgUrl:
-            "https://d15omoko64skxi.cloudfront.net/wp-content/uploads/2017/02/Screen-Shot-2017-02-07-at-8.39.13-AM-1024x462.png",
+            "https://creativecommons.org/wp-content/uploads/2017/02/Screen-Shot-2017-02-07-at-8.39.13-AM-1024x462.png",
         },
         {
           name: "Iconfinder",
